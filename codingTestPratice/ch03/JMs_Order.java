@@ -24,11 +24,10 @@ import java.util.Scanner;
  * 1. 숫자 N과 M을 입력 받고, 제한 범위에 맞게 조정한다.
  * 2. N개의 재료들이 가진 각각의 고유 번호에 해당하는 숫자들을, 띄어쓰기로 구분하여 입력 받는다고 했으니, nextLine으로 입력 받는다.
  * 3. 띄어쓰기를 구분자 삼아 String을 split하여 배열로 전환하고, Arrays.stream을 사용한다.
- * 3-1. filter를 사용하여 띄어쓰기가 저장된 배열을 걸러낸다.
- * 3-2. mapToInt(Integer::parseInt)를 사용함으로써 오류 발생에 대비하며 숫자로 전환한다.
- * 3-3. 그렇게 추출한 숫자들이 제한 범위에 맞는지 확인하고, 범위를 벗어났다면 배제한다.
- * 3-4. 최종 결과값들을 List<Integer>에 저장해야 하므로, boxed()를 사용하여 Integer 타입으로 전환한다.
- * 3-5. List<Integer> intList에 모든 값을 저장한다.
+ * 3-1. mapToInt(Integer::parseInt)를 사용함으로써 오류 발생에 대비하며 숫자로 전환한다.
+ * 3-2. 그렇게 추출한 숫자들이 제한 범위에 맞는지 확인하고, 범위를 벗어났다면 배제한다.
+ * 3-3. 최종 결과값들을 List<Integer>에 저장해야 하므로, boxed()를 사용하여 Integer 타입으로 전환한다.
+ * 3-4. List<Integer> intList에 모든 값을 저장한다.
  * 4. 완성되는 갑옷의 갯수를 저장할 count를 준비한다.
  * 5. for문을 사용한다.
  * 5-1. 입력에 오류가 있거나 범위에 알맞지 않는 숫자를 배제하는 과정이 있었고, 제한된 갯수를 초과하는 숫자의 입력이 있을 수도 있기 때문에
@@ -56,7 +55,6 @@ public class JMs_Order {
 		
 		String inputStr = sc3.nextLine(); // 띄어쓰기가 필요하니까 next 쓰면 안 됨
 		List<Integer> intList = Arrays.stream(inputStr.split(" "))
-					.filter(s -> !s.equals(" "))
 					.mapToInt(Integer::parseInt)
 					.filter(n -> (1 <= n) && (n <= 100000))
 					.boxed()
