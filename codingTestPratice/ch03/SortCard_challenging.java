@@ -142,7 +142,7 @@ public class SortCard_challenging {
 		int first = 1;
 		int last = N;
 		
-		while(N>=2) { // 그냥 다른 거 다 거르고 포인터만 쓸까?
+		while(N>=2) {
 			
 			cycle_counter++;
 			first += Math.pow(2, cycle_counter-1);
