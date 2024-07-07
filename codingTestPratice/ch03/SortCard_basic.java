@@ -45,7 +45,6 @@ public class SortCard_basic {
 			cards.removeFirst();
 			int tempCard = cards.removeFirst();
 			cards.addLast(tempCard);
-			System.out.println("2번 : " + cards.getLast());
 			}
 		
 		System.out.println(cards.getLast());
