@@ -65,6 +65,9 @@ import java.util.Scanner;
  * 5-4. 이와 같이 계속해서 출력해서 list3과 list7 내에 저장된 요소가 모두 없어질 때까지 list 내의 요소를 줄여나간다.
  *      문제의 조건 중 "오름차순으로 출력" 이라는 문구가 있는데, 이렇게 하면 정렬과정 없이 바로 출력됨.       
  */
+
+// 이게 반복문 중첩이 엄청 많긴 한데, 중간중간 끊는 것도 많고, 반복하는 단위 자체가 작은 편이라 시간제한 충분함.
+
 public class WonderNumber {
 
 	public static void main(String[] args) {
