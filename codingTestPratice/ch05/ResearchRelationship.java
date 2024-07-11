@@ -122,7 +122,6 @@ public class ResearchRelationship {
 			exploringN.add(next);
 			exploringI.add(i);
 			movecount++;
-					
 			
 			for(int j=0; j<arr[next].size()+1; j++) { // 일부러 size+1로 해서 최대값을 size로 하고
 				
