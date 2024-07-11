@@ -69,8 +69,10 @@ import java.io.InputStreamReader;
  *       다음 회차는 아예 다른 숫자에 대해서 탐색하게 된다.
  *       같은 for문이지만 아예 새로운 값을 대상으로 for문을 사용한 것과 같아진다.
  * 9. 결과를 출력한다.
- * 
  */
+
+// exploringN.contains()에 for문이 내장되어 있어서 코드 실행횟수가 낭비될 수도 있으나, 한 번 쓸 때마다 최대 시행횟수는 4회에 불과하다.
+// exploringN은 이번 회차에서 지나간 숫자들을 저장하는 곳이고, 지나간 횟수가 5회 이상이면 이미 탐색 종료하고 결과가 나왔을 테니까
 
 import java.util.LinkedList;
 import java.util.Stack;
