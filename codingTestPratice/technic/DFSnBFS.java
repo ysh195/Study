@@ -23,7 +23,7 @@ import java.util.Scanner;
  * 
  */
 
-// 원래는 잘 이해가 안 되지만 꽤 간결한데?
+// 원리는 잘 이해가 안 되지만 꽤 간결한데?
 
 public class DFSnBFS {
 	
