@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="output" >
+    <script>
+        document.addEventListener("DOMContentLoad", function(e) {
+            getHeritage();
+        });
+
+        function getHeritage(){
+            const heritage = opener.document.getElementById('input').value;
+            document.getElementById('output').value = heritage;
+        }
+
+        window.addEventListener("beforeunload", function(e){                   
+            sendresult();            
+        });
+        
+        function sendresult(){
+            var result = "this is a result";
+            opener.document.getElementById('postbox').innerText = result;
+        }
+    </script>
+</body>
+</html>
